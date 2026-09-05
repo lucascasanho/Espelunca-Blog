@@ -4,7 +4,7 @@ Theme URI: https://github.com/lucascasanho/Espelunca-Blog
 Author: Lucas / Espelunca
 Author URI: https://espelunca.social
 Description: Tema editorial simples e responsivo para o blog da Espelunca, desenvolvido do zero como Block Theme nativo do WordPress.
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.1
@@ -189,9 +189,18 @@ a:focus-visible {
   background: var(--wp--preset--color--surface-alt);
 }
 
-.esp-post-card .wp-block-post-featured-image img {
+.esp-post-card .wp-block-post-featured-image img,
+.esp-post-card .wp-block-post-featured-image a {
   width: 100%;
   height: 100%;
+}
+
+.esp-post-card .wp-block-post-featured-image a {
+  display: block;
+}
+
+.esp-post-card .wp-block-post-featured-image img {
+  display: block;
   object-fit: cover;
   transition: transform 300ms ease;
 }
@@ -279,8 +288,12 @@ a:focus-visible {
   background: var(--wp--preset--color--surface-alt);
 }
 
-.esp-single-featured img {
+.esp-single-featured img,
+.esp-featured-fallback-image {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .esp-article-content {
@@ -291,6 +304,35 @@ a:focus-visible {
 .esp-article-content > ul,
 .esp-article-content > ol {
   margin-block: 1.25em;
+}
+
+.esp-article-content img,
+.esp-article-content .wp-block-image img,
+.esp-article-content .wp-block-gallery img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.esp-article-content .wp-block-image,
+.esp-article-content .wp-block-gallery {
+  margin-block: clamp(1.75rem, 5vw, 3rem);
+}
+
+.esp-article-content .wp-block-image.alignwide,
+.esp-article-content .wp-block-gallery.alignwide {
+  width: min(1180px, calc(100vw - 40px));
+  max-width: none;
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+
+.esp-article-content figcaption {
+  margin-top: 0.7rem;
+  color: var(--wp--preset--color--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  text-align: left;
 }
 
 .esp-article-content blockquote {
@@ -419,6 +461,11 @@ a:focus-visible {
 
   .esp-post-grid > li:first-child .wp-block-post-title {
     font-size: clamp(1.8rem, 9vw, 3rem);
+  }
+
+  .esp-article-content .wp-block-image.alignwide,
+  .esp-article-content .wp-block-gallery.alignwide {
+    width: min(100%, calc(100vw - 32px));
   }
 
   .esp-footer-inner {
