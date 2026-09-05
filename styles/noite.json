@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Noite",
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "canvas", "name": "Fundo", "color": "#0f1115" },
+        { "slug": "surface", "name": "Superfície", "color": "#171a20" },
+        { "slug": "surface-alt", "name": "Superfície alternativa", "color": "#1d2129" },
+        { "slug": "ink", "name": "Texto", "color": "#f3f5f7" },
+        { "slug": "muted", "name": "Texto secundário", "color": "#a8b0bb" },
+        { "slug": "border", "name": "Borda", "color": "#2a303a" },
+        { "slug": "accent", "name": "Espelunca", "color": "#69b9ef" },
+        { "slug": "accent-strong", "name": "Espelunca forte", "color": "#91cdf4" },
+        { "slug": "accent-soft", "name": "Espelunca suave", "color": "#31546b" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|canvas",
+      "text": "var:preset|color|ink"
+    }
+  }
+}

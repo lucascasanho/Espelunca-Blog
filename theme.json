@@ -1,0 +1,123 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1180px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        { "slug": "canvas", "name": "Fundo", "color": "#f7f8fa" },
+        { "slug": "surface", "name": "Superfície", "color": "#ffffff" },
+        { "slug": "surface-alt", "name": "Superfície alternativa", "color": "#eef2f5" },
+        { "slug": "ink", "name": "Texto", "color": "#191b22" },
+        { "slug": "muted", "name": "Texto secundário", "color": "#66707c" },
+        { "slug": "border", "name": "Borda", "color": "#dfe4e9" },
+        { "slug": "accent", "name": "Espelunca", "color": "#2b8fcd" },
+        { "slug": "accent-strong", "name": "Espelunca forte", "color": "#1f6fa5" },
+        { "slug": "accent-soft", "name": "Espelunca suave", "color": "#b9ddef" }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "rem", "em", "%", "vw", "vh"],
+      "spacingSizes": [
+        { "slug": "10", "name": "1", "size": "0.5rem" },
+        { "slug": "20", "name": "2", "size": "0.75rem" },
+        { "slug": "30", "name": "3", "size": "1rem" },
+        { "slug": "40", "name": "4", "size": "1.5rem" },
+        { "slug": "50", "name": "5", "size": "2rem" },
+        { "slug": "60", "name": "6", "size": "3rem" },
+        { "slug": "70", "name": "7", "size": "4.5rem" }
+      ]
+    },
+    "typography": {
+      "dropCap": false,
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "slug": "sans",
+          "name": "Sans",
+          "fontFamily": "Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif"
+        },
+        {
+          "slug": "mono",
+          "name": "Mono",
+          "fontFamily": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", monospace"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small", "name": "Pequeno", "size": "0.875rem" },
+        { "slug": "medium", "name": "Normal", "size": "1rem" },
+        { "slug": "large", "name": "Grande", "size": "1.25rem" },
+        { "slug": "x-large", "name": "Muito grande", "size": "clamp(1.75rem, 4vw, 3rem)" },
+        { "slug": "hero", "name": "Hero", "size": "clamp(2.6rem, 8vw, 6.6rem)" }
+      ]
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|canvas",
+      "text": "var:preset|color|ink"
+    },
+    "spacing": {
+      "blockGap": "var:preset|spacing|40"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|sans",
+      "fontSize": "var:preset|font-size|medium",
+      "lineHeight": "1.65"
+    },
+    "elements": {
+      "link": {
+        "color": { "text": "var:preset|color|accent" },
+        "typography": { "textDecoration": "none" }
+      },
+      "heading": {
+        "color": { "text": "var:preset|color|ink" },
+        "typography": {
+          "fontWeight": "760",
+          "lineHeight": "1.08",
+          "letterSpacing": "-0.035em"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var:preset|color|ink",
+          "text": "var:preset|color|canvas"
+        },
+        "border": { "radius": "999px" },
+        "typography": { "fontWeight": "700" },
+        "spacing": {
+          "padding": {
+            "top": "0.7rem",
+            "right": "1.1rem",
+            "bottom": "0.7rem",
+            "left": "1.1rem"
+          }
+        }
+      }
+    },
+    "blocks": {
+      "core/post-content": {
+        "layout": { "contentSize": "760px", "wideSize": "1180px" }
+      },
+      "core/separator": {
+        "color": { "background": "var:preset|color|border" }
+      }
+    }
+  },
+  "templateParts": [
+    { "name": "header", "title": "Cabeçalho", "area": "header" },
+    { "name": "footer", "title": "Rodapé", "area": "footer" }
+  ]
+}

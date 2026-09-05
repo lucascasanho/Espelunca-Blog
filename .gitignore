@@ -1,0 +1,23 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local WordPress/dev artifacts
+node_modules/
+vendor/
+*.log
+*.tmp
+*.swp
+
+# Secrets must never be versioned
+.env
+.env.*
+!.env.example
+secrets/
+
+# Build/package output
+*.zip
+.dist/
+dist/
